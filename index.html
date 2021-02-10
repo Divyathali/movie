@@ -46,8 +46,9 @@
             }
         </style>
         <script>
-        
-            fetch('http://api.tvmaze.com/shows')
+     
+        async function foo(url){
+            await fetch(url)
             .then(res => res.json())
             .then(res => 
             {
@@ -135,7 +136,7 @@
                     alert(error);
                  console.error('Error:', error);
                 });           
-        
+            }            
         function myFunction() 
                 {
                     var input, filter, table1, trn, td, i, txtValue;
@@ -160,6 +161,8 @@
                         }       
                     }
                 }
+            
+                window.onload=()=>{foo('http://api.tvmaze.com/shows');}
         </script>
     </head>    
     <body>
