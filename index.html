@@ -46,8 +46,8 @@
             }
         </style>
         <script>
-            async function foo(){
-                await fetch('http://api.tvmaze.com/shows')
+           
+                fetch('http://api.tvmaze.com/shows')
                 .then(res => res.json())
                 .then(res =>
                  {
@@ -129,14 +129,13 @@
                         table.append(tr);
                         document.body.appendChild(table);
                      }
-                })
-                .catch((error) => 
+                }).catch((error) => 
                 {
                     alert(error);
                     console.error('Error:', error);
                 });           
-            }            
-            foo();
+                       
+         
             function myFunction() 
             {
                 var input, filter, table1, trn, td, i, txtValue;
