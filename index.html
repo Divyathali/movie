@@ -48,7 +48,6 @@
         </style>
         <script>
             
-
             fetch('http://api.tvmaze.com/shows')
             .then(res => res.json())
             .then(res => 
@@ -133,8 +132,12 @@
                     //console.log(res[i].genres);
                 }               
 
-            });
-            function myFunction() 
+                }).catch((error) => {
+                    alert(error);
+                 console.error('Error:', error);
+                });           
+        
+        function myFunction() 
                 {
                     var input, filter, table1, trn, td, i, txtValue;
                     input = document.getElementById("myInput");
