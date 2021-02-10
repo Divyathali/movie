@@ -5,7 +5,6 @@
         <style>
             #myInput {
                 position:absolute;
-                background-image: url('/css/searchicon.png');
                 background-position: 10px 10px;
                 background-repeat: no-repeat;
                 width: 30%;
@@ -47,7 +46,7 @@
             }
         </style>
         <script>
-            
+        
             fetch('http://api.tvmaze.com/shows')
             .then(res => res.json())
             .then(res => 
@@ -165,7 +164,7 @@
     </head>    
     <body>
         <div style="position:absolute;left:20px;">
-            <img src="logo.png" style="width200px;height:60px;">
+            <img src="logo.png" style="width:200px;height:60px;">
         </div>
         <div>
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" size="50">
