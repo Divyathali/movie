@@ -55,7 +55,7 @@
                     //document.getElementById("demo").innerHTML = xhttp.responseText;
                     var res = JSON.parse( xhttp.responseText);
                     console.log(res);
-                     try{
+                     
                             var len=res.length;
                             var table=document.createElement('table');
                             table.id="myTable";
@@ -136,12 +136,8 @@
                             }
                             
                             document.body.appendChild(table);
-                        }            
-                    catch(error){
-                        alert(error);
-                        console.error('Error:', error);
-                    }           
-                }
+                        }           
+                    
             };
             xhttp.open("GET", "http://api.tvmaze.com/shows", true);
             xhttp.send();
